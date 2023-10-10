@@ -4,7 +4,7 @@ pipeline {
         registry = "kett/web"
         dockerImage = ""
         dockerhub = "https://hub.docker.com/repository/docker/kett/web/general"
-        dockerhub_credentials = "kett-dockerhub" #docker credentials ID 작성
+        dockerhub_credentials = "kett" #docker credentials ID 작성
     }
     
     agent any
