@@ -24,6 +24,7 @@ pipeline {
             steps {
                 script {
                     dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    dockerImageLatest = docker.build registry + ":latest"
                 }
             }
         }
@@ -32,6 +33,11 @@ pipeline {
                 script {
                     docker.withRegistry('', dockerhub_credentials) {
                         dockerImage.push()
+                        dockerImageLatest.push()
+                        currentBuild.result = 'SUCCESS'
+                    } catch (Exception e) {
+                        currentBuild.result = 'FAILURE'
+                        throw e
                     }
                 }
             }
