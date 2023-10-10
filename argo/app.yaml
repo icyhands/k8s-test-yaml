@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-nginx3
+  name: test
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: hello-nginx
+      app: test
   template:
     metadata:
       labels:
-        app: hello-nginx
+        app: test
     spec:
       containers:
-        - name: hello-nginx3
-          image: nginx:latest
+        - name: test
+          image: kett/jen-test:latest
           ports:
             - containerPort: 80
