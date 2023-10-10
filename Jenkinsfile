@@ -4,7 +4,7 @@ pipeline {
         registry = "kett/jen-test"
         dockerImage = ""
         dockerhub = "https://hub.docker.com/repository/docker/kett/jen-test/general"
-        dockerhub_credentials = "kett"
+        dockerhub_credentials = "kett-dockerhub"
     }
     
     agent any
