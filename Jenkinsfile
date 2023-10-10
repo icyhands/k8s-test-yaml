@@ -1,9 +1,9 @@
 pipeline {
     environment {
         GIT_URL = "https://github.com/icyhands/k8s-test-yaml.git"
-        registry = "kett/web"
+        registry = "kett/jen-test"
         dockerImage = ""
-        dockerhub = "https://hub.docker.com/repository/docker/kett/web/general"
+        dockerhub = "https://hub.docker.com/repository/docker/kett/jen-test/general"
         dockerhub_credentials = "kett"
     }
     
